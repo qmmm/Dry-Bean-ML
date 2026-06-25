@@ -165,7 +165,7 @@ python main.py sample-size
 | BP Neural Network |    0.922 |           0.931 |        0.934 |    0.932 |
 
 从整体指标来看，KNN、随机森林和 BP 神经网络的分类效果较为接近，整体优于 ID3 决策树。其中，随机森林的测试集准确率最高，约为 0.923；BP 神经网络和 KNN 分别达到 0.922 和 0.921，三者差距较小。从 Macro F1 指标看，KNN、随机森林和 BP 神经网络均保持在 0.93 以上，说明它们不仅整体准确率较高，而且对各类别的分类效果较均衡。ID3 决策树的 Accuracy 和 Macro F1 相对较低，说明单棵决策树在复杂类别边界上的泛化能力略弱。
-<img src="DryBeanDataset/visualizations/overall_precision_recall_f1_grouped_bar.png"width="700">
+
 
 
 ### 2. BP 神经网络 Loss 曲线
