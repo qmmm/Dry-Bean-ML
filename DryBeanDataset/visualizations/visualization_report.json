@@ -1,0 +1,41 @@
+{
+  "models": [
+    "KNN",
+    "ID3",
+    "Random Forest",
+    "BP Neural Network"
+  ],
+  "labels": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "note": "KNN, ID3, and Random Forest are non-gradient/non-iterative in this project, so only the BP neural network has train/validation loss curves.",
+  "metric_summary_csv": "DryBeanDataset\\visualizations\\model_visualization_summary.csv",
+  "per_class_metric_summary_csv": "DryBeanDataset\\visualizations\\per_class_metric_summary.csv",
+  "plots": {
+    "KNN_confusion_matrix": "DryBeanDataset\\visualizations\\confusion_matrices\\knn_confusion_matrix.png",
+    "ID3_confusion_matrix": "DryBeanDataset\\visualizations\\confusion_matrices\\id3_confusion_matrix.png",
+    "Random Forest_confusion_matrix": "DryBeanDataset\\visualizations\\confusion_matrices\\random_forest_confusion_matrix.png",
+    "BP Neural Network_confusion_matrix": "DryBeanDataset\\visualizations\\confusion_matrices\\bp_neural_network_confusion_matrix.png",
+    "all_models_confusion_matrices": "DryBeanDataset\\visualizations\\confusion_matrices\\all_models_confusion_matrices.png",
+    "overall_metric_grouped_bar": "DryBeanDataset\\visualizations\\overall_precision_recall_f1_grouped_bar.png",
+    "per_class_f1_grouped_bar": "DryBeanDataset\\visualizations\\per_class_f1_grouped_bar.png",
+    "bp_loss_curve": "DryBeanDataset\\visualizations\\bp_nn_loss_curve.png",
+    "bp_accuracy_curve": "DryBeanDataset\\visualizations\\bp_nn_accuracy_curve.png"
+  },
+  "best_test_accuracy_model": {
+    "model": "Random Forest",
+    "accuracy": 0.9229082937522836,
+    "macro_precision": 0.9348883092647451,
+    "macro_recall": 0.932393966713793,
+    "macro_f1": 0.9335718072678495,
+    "weighted_precision": 0.9231421072203768,
+    "weighted_recall": 0.9229082937522836,
+    "weighted_f1": 0.9229355065412881
+  }
+}

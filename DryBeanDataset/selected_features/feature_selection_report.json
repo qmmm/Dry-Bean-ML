@@ -1,0 +1,170 @@
+{
+  "method": [
+    "Pearson correlation redundancy removal on train split",
+    "Correlation-selected feature export for train/val/test"
+  ],
+  "target_column": "Class",
+  "correlation_threshold": 0.95,
+  "initial_feature_count": 41,
+  "kept_after_correlation_count": 16,
+  "dropped_by_correlation_count": 25,
+  "selected_feature_count": 16,
+  "selected_features": [
+    "Area",
+    "Perimeter",
+    "AspectRation",
+    "Eccentricity",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor4",
+    "AreaPerPerimeter",
+    "AreaPerPerimeterSquared",
+    "PerimeterPerArea",
+    "ConvexAreaGap",
+    "AreaEllipseRatio",
+    "log_MajorAxisLength"
+  ],
+  "dropped_by_correlation": [
+    {
+      "dropped": "MajorAxisLength",
+      "kept": "Perimeter",
+      "abs_correlation": 0.9524780414187979
+    },
+    {
+      "dropped": "MinorAxisLength",
+      "kept": "Area",
+      "abs_correlation": 0.952021796629081
+    },
+    {
+      "dropped": "ConvexArea",
+      "kept": "Area",
+      "abs_correlation": 0.99993989803905
+    },
+    {
+      "dropped": "EquivDiameter",
+      "kept": "Area",
+      "abs_correlation": 0.9849555604519369
+    },
+    {
+      "dropped": "Compactness",
+      "kept": "AspectRation",
+      "abs_correlation": 0.987731980665465
+    },
+    {
+      "dropped": "ShapeFactor3",
+      "kept": "AspectRation",
+      "abs_correlation": 0.9786838586551824
+    },
+    {
+      "dropped": "AspectRatio",
+      "kept": "AspectRation",
+      "abs_correlation": 1.0
+    },
+    {
+      "dropped": "AxisLengthSum",
+      "kept": "Area",
+      "abs_correlation": 0.9777132112818926
+    },
+    {
+      "dropped": "AxisLengthDiff",
+      "kept": "ShapeFactor2",
+      "abs_correlation": 0.9549861319826621
+    },
+    {
+      "dropped": "AxisLengthMean",
+      "kept": "Area",
+      "abs_correlation": 0.9777132112818928
+    },
+    {
+      "dropped": "AxisDiffRatio",
+      "kept": "AspectRation",
+      "abs_correlation": 0.9899045749644076
+    },
+    {
+      "dropped": "MinorMajorRatio",
+      "kept": "AspectRation",
+      "abs_correlation": 0.9764878160478079
+    },
+    {
+      "dropped": "AreaConvexRatio",
+      "kept": "Solidity",
+      "abs_correlation": 0.9758491572865168
+    },
+    {
+      "dropped": "ConvexAreaGapRatio",
+      "kept": "Solidity",
+      "abs_correlation": 0.9758491572865119
+    },
+    {
+      "dropped": "EquivDiameterMajorRatio",
+      "kept": "AspectRation",
+      "abs_correlation": 0.976338963271846
+    },
+    {
+      "dropped": "EquivDiameterMinorRatio",
+      "kept": "AspectRation",
+      "abs_correlation": 0.9984673343408406
+    },
+    {
+      "dropped": "RoundnessSolidity",
+      "kept": "roundness",
+      "abs_correlation": 0.9987984448635203
+    },
+    {
+      "dropped": "CompactnessSolidity",
+      "kept": "AspectRation",
+      "abs_correlation": 0.9842997516109077
+    },
+    {
+      "dropped": "ExtentSolidity",
+      "kept": "Extent",
+      "abs_correlation": 0.9976902235661976
+    },
+    {
+      "dropped": "EccentricityAspectRatio",
+      "kept": "AspectRation",
+      "abs_correlation": 0.9969006817355814
+    },
+    {
+      "dropped": "log_Area",
+      "kept": "Perimeter",
+      "abs_correlation": 0.9618430699778417
+    },
+    {
+      "dropped": "log_Perimeter",
+      "kept": "Perimeter",
+      "abs_correlation": 0.9860848929493191
+    },
+    {
+      "dropped": "log_MinorAxisLength",
+      "kept": "ShapeFactor1",
+      "abs_correlation": 0.9874223931512863
+    },
+    {
+      "dropped": "log_ConvexArea",
+      "kept": "Perimeter",
+      "abs_correlation": 0.9623849047126148
+    },
+    {
+      "dropped": "log_EquivDiameter",
+      "kept": "Perimeter",
+      "abs_correlation": 0.9619113517322936
+    }
+  ],
+  "plots": {
+    "correlation_heatmap": "DryBeanDataset\\selected_features\\plots\\train_feature_correlation_heatmap.png"
+  },
+  "raw_selected_files": {
+    "train": "DryBeanDataset\\selected_features\\raw\\Dry_Bean_Dataset_Selected_train.csv",
+    "val": "DryBeanDataset\\selected_features\\raw\\Dry_Bean_Dataset_Selected_val.csv",
+    "test": "DryBeanDataset\\selected_features\\raw\\Dry_Bean_Dataset_Selected_test.csv"
+  },
+  "standardized_selected_files": {
+    "train": "DryBeanDataset\\selected_features\\standardized\\Dry_Bean_Dataset_Selected_Standardized_train.csv",
+    "val": "DryBeanDataset\\selected_features\\standardized\\Dry_Bean_Dataset_Selected_Standardized_val.csv",
+    "test": "DryBeanDataset\\selected_features\\standardized\\Dry_Bean_Dataset_Selected_Standardized_test.csv"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "data_dir": "DryBeanDataset\\selected_features\\standardized",
+  "feature_count": 16,
+  "features": [
+    "Area",
+    "Perimeter",
+    "AspectRation",
+    "Eccentricity",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor4",
+    "AreaPerPerimeter",
+    "AreaPerPerimeterSquared",
+    "PerimeterPerArea",
+    "ConvexAreaGap",
+    "AreaEllipseRatio",
+    "log_MajorAxisLength"
+  ],
+  "labels": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "train_size": 9473,
+  "val_size": 1347,
+  "test_size": 2737,
+  "parameters": {
+    "k_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      15,
+      21,
+      31
+    ],
+    "tree_depths": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20
+    ],
+    "rf_depths": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      16
+    ],
+    "rf_trees": 9,
+    "bp_epochs": 30,
+    "bp_hidden_size": 32,
+    "bp_learning_rate": 0.015,
+    "bp_l2": 0.0005,
+    "bp_dropout_rate": 0.15,
+    "random_state": 42
+  },
+  "analysis": {
+    "bp_epoch_curve": {
+      "best_validation": {
+        "experiment": "bp_epoch_curve",
+        "model": "BP Neural Network",
+        "parameter_name": "epoch",
+        "parameter_value": 16,
+        "train_accuracy": 0.9244167634329146,
+        "val_accuracy": 0.9294729027468448,
+        "test_accuracy": 0.9258312020460358,
+        "train_val_gap": -0.00505613931393023,
+        "train_test_gap": -0.0014144386131211828,
+        "train_loss": 0.21077817912069605,
+        "val_loss": 0.20879336496180032,
+        "learning_rate": 0.01275
+      },
+      "largest_train_test_gap": {
+        "experiment": "bp_epoch_curve",
+        "model": "BP Neural Network",
+        "parameter_name": "epoch",
+        "parameter_value": 29,
+        "train_accuracy": 0.9314894964636334,
+        "val_accuracy": 0.9265033407572383,
+        "test_accuracy": 0.92802338326635,
+        "train_val_gap": 0.004986155706395157,
+        "train_test_gap": 0.0034661131972834047,
+        "train_loss": 0.20763630347669831,
+        "val_loss": 0.21355870245544728,
+        "learning_rate": 0.010837499999999998
+      }
+    },
+    "id3_depth_curve": {
+      "best_validation": {
+        "experiment": "id3_depth_curve",
+        "model": "ID3",
+        "parameter_name": "max_depth",
+        "parameter_value": 12,
+        "train_accuracy": 0.9756149055209543,
+        "val_accuracy": 0.902746844840386,
+        "test_accuracy": 0.8995250274022653,
+        "train_val_gap": 0.07286806068056828,
+        "train_test_gap": 0.07608987811868906,
+        "node_count": 849,
+        "leaf_count": 425,
+        "observed_depth": 12
+      },
+      "largest_train_test_gap": {
+        "experiment": "id3_depth_curve",
+        "model": "ID3",
+        "parameter_name": "max_depth",
+        "parameter_value": 20,
+        "train_accuracy": 0.9850100285020584,
+        "val_accuracy": 0.9005196733481812,
+        "test_accuracy": 0.8944099378881988,
+        "train_val_gap": 0.08449035515387726,
+        "train_test_gap": 0.09060009061385965,
+        "node_count": 1035,
+        "leaf_count": 518,
+        "observed_depth": 18
+      }
+    },
+    "knn_k_curve": {
+      "best_validation": {
+        "experiment": "knn_k_curve",
+        "model": "KNN",
+        "parameter_name": "k",
+        "parameter_value": 15,
+        "train_accuracy": 0.9305394278475667,
+        "val_accuracy": 0.9265033407572383,
+        "test_accuracy": 0.9240043843624406,
+        "train_val_gap": 0.004036087090328433,
+        "train_test_gap": 0.006535043485126124
+      },
+      "largest_train_test_gap": {
+        "experiment": "knn_k_curve",
+        "model": "KNN",
+        "parameter_name": "k",
+        "parameter_value": 1,
+        "train_accuracy": 1.0,
+        "val_accuracy": 0.8953229398663697,
+        "test_accuracy": 0.8998903909389843,
+        "train_val_gap": 0.10467706013363032,
+        "train_test_gap": 0.10010960906101574
+      }
+    },
+    "random_forest_depth_curve": {
+      "best_validation": {
+        "experiment": "random_forest_depth_curve",
+        "model": "Random Forest",
+        "parameter_name": "max_depth",
+        "parameter_value": 12,
+        "train_accuracy": 0.9635807030507759,
+        "val_accuracy": 0.9175946547884187,
+        "test_accuracy": 0.9221775666788454,
+        "train_val_gap": 0.04598604826235719,
+        "train_test_gap": 0.04140313637193049,
+        "n_estimators": 9,
+        "observed_depth_mean": 12.0,
+        "leaf_count_mean": 292.22222222222223
+      },
+      "largest_train_test_gap": {
+        "experiment": "random_forest_depth_curve",
+        "model": "Random Forest",
+        "parameter_name": "max_depth",
+        "parameter_value": 16,
+        "train_accuracy": 0.9689644252084872,
+        "val_accuracy": 0.9153674832962138,
+        "test_accuracy": 0.9247351114358787,
+        "train_val_gap": 0.05359694191227349,
+        "train_test_gap": 0.044229313772608525,
+        "n_estimators": 9,
+        "observed_depth_mean": 16.0,
+        "leaf_count_mean": 341.44444444444446
+      }
+    }
+  },
+  "outputs": {
+    "summary_csv": "DryBeanDataset\\overfitting_analysis_results\\overfitting_summary.csv",
+    "accuracy_curves": "DryBeanDataset\\overfitting_analysis_results\\overfitting_accuracy_curves.png",
+    "gap_curves": "DryBeanDataset\\overfitting_analysis_results\\overfitting_gap_curves.png"
+  }
+}

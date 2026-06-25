@@ -1,0 +1,267 @@
+{
+  "input_dir": "DryBeanDataset\\cleaned",
+  "output_dir": "DryBeanDataset\\features",
+  "input_rows": {
+    "train": 9473,
+    "val": 1347,
+    "test": 2737
+  },
+  "feature_count": 41,
+  "base_feature_count": 16,
+  "engineered_feature_count": 25,
+  "base_features": [
+    "Area",
+    "Perimeter",
+    "MajorAxisLength",
+    "MinorAxisLength",
+    "AspectRation",
+    "Eccentricity",
+    "ConvexArea",
+    "EquivDiameter",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "Compactness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor3",
+    "ShapeFactor4"
+  ],
+  "engineered_features": [
+    "AspectRatio",
+    "AxisLengthSum",
+    "AxisLengthDiff",
+    "AxisLengthMean",
+    "AxisDiffRatio",
+    "MinorMajorRatio",
+    "AreaPerPerimeter",
+    "AreaPerPerimeterSquared",
+    "PerimeterPerArea",
+    "AreaConvexRatio",
+    "ConvexAreaGap",
+    "ConvexAreaGapRatio",
+    "AreaEllipseRatio",
+    "EquivDiameterMajorRatio",
+    "EquivDiameterMinorRatio",
+    "RoundnessSolidity",
+    "CompactnessSolidity",
+    "ExtentSolidity",
+    "EccentricityAspectRatio",
+    "log_Area",
+    "log_Perimeter",
+    "log_MajorAxisLength",
+    "log_MinorAxisLength",
+    "log_ConvexArea",
+    "log_EquivDiameter"
+  ],
+  "target_column": "Class",
+  "raw_feature_files": {
+    "train": "DryBeanDataset\\features\\raw\\Dry_Bean_Dataset_Features_train.csv",
+    "val": "DryBeanDataset\\features\\raw\\Dry_Bean_Dataset_Features_val.csv",
+    "test": "DryBeanDataset\\features\\raw\\Dry_Bean_Dataset_Features_test.csv"
+  },
+  "standardized_feature_files": {
+    "train": "DryBeanDataset\\features\\standardized\\Dry_Bean_Dataset_Features_Standardized_train.csv",
+    "val": "DryBeanDataset\\features\\standardized\\Dry_Bean_Dataset_Features_Standardized_val.csv",
+    "test": "DryBeanDataset\\features\\standardized\\Dry_Bean_Dataset_Features_Standardized_test.csv"
+  },
+  "standardization": {
+    "method": "z_score",
+    "fit_on": "train split only",
+    "stats": {
+      "Area": {
+        "mean": 53036.955769027765,
+        "std": 29392.320571716853
+      },
+      "Perimeter": {
+        "mean": 852.3086367570992,
+        "std": 210.43601847883164
+      },
+      "MajorAxisLength": {
+        "mean": 319.8816592689793,
+        "std": 85.92890801934567
+      },
+      "MinorAxisLength": {
+        "mean": 202.28537353537044,
+        "std": 44.96539965954888
+      },
+      "AspectRation": {
+        "mean": 1.5815344645234573,
+        "std": 0.2448018395114281
+      },
+      "Eccentricity": {
+        "mean": 0.7506093232230141,
+        "std": 0.09143333265104558
+      },
+      "ConvexArea": {
+        "mean": 53756.63696822548,
+        "std": 29841.24392092389
+      },
+      "EquivDiameter": {
+        "mean": 252.99624491217637,
+        "std": 59.343487240251974
+      },
+      "Extent": {
+        "mean": 0.7496258466072518,
+        "std": 0.04882995787993056
+      },
+      "Solidity": {
+        "mean": 0.9871854543234325,
+        "std": 0.004576150851765404
+      },
+      "roundness": {
+        "mean": 0.8734435072143985,
+        "std": 0.05938525063797247
+      },
+      "Compactness": {
+        "mean": 0.8002087115300606,
+        "std": 0.061335237626007066
+      },
+      "ShapeFactor1": {
+        "mean": 0.006563606629379268,
+        "std": 0.001130309540142077
+      },
+      "ShapeFactor2": {
+        "mean": 0.0017187790632557617,
+        "std": 0.0005949435739902887
+      },
+      "ShapeFactor3": {
+        "mean": 0.6440959000218048,
+        "std": 0.09842290630602597
+      },
+      "ShapeFactor4": {
+        "mean": 0.9950793492516204,
+        "std": 0.004366098340785721
+      },
+      "AspectRatio": {
+        "mean": 1.5815344645234573,
+        "std": 0.2448018395114281
+      },
+      "AxisLengthSum": {
+        "mean": 522.1670328043498,
+        "std": 125.74669005166189
+      },
+      "AxisLengthDiff": {
+        "mean": 117.59628573360887,
+        "std": 54.76402780047805
+      },
+      "AxisLengthMean": {
+        "mean": 261.0835164021749,
+        "std": 62.87334502583094
+      },
+      "AxisDiffRatio": {
+        "mean": 0.21847402546818323,
+        "std": 0.07185964858510048
+      },
+      "MinorMajorRatio": {
+        "mean": 0.6471365654544623,
+        "std": 0.0976313823255547
+      },
+      "AreaPerPerimeter": {
+        "mean": 59.21644623500603,
+        "std": 14.943645879165254
+      },
+      "AreaPerPerimeterSquared": {
+        "mean": 0.07014243359660043,
+        "std": 0.010995625994740972
+      },
+      "PerimeterPerArea": {
+        "mean": 0.017637674759300722,
+        "std": 0.0032733826130314017
+      },
+      "AreaConvexRatio": {
+        "mean": 0.9871305917065023,
+        "std": 0.00467609492875436
+      },
+      "ConvexAreaGap": {
+        "mean": 719.6811991977198,
+        "std": 554.042816907224
+      },
+      "ConvexAreaGapRatio": {
+        "mean": 0.012869408293497697,
+        "std": 0.00467609492875436
+      },
+      "AreaEllipseRatio": {
+        "mean": 0.9952083510789085,
+        "std": 0.012464751751056628
+      },
+      "EquivDiameterMajorRatio": {
+        "mean": 0.8002943651912796,
+        "std": 0.06181763425697905
+      },
+      "EquivDiameterMinorRatio": {
+        "mean": 1.250726797617203,
+        "std": 0.09461530965876108
+      },
+      "RoundnessSolidity": {
+        "mean": 0.8624129461585752,
+        "std": 0.06095487602808611
+      },
+      "CompactnessSolidity": {
+        "mean": 0.7900361250109347,
+        "std": 0.06174131652016125
+      },
+      "ExtentSolidity": {
+        "mean": 0.7400617988173718,
+        "std": 0.04893397286207024
+      },
+      "EccentricityAspectRatio": {
+        "mean": 1.2078216119547305,
+        "std": 0.3199158589359925
+      },
+      "log_Area": {
+        "mean": 10.77938600171416,
+        "std": 0.41205724475833594
+      },
+      "log_Perimeter": {
+        "mean": 6.723269304848134,
+        "std": 0.21986972856403994
+      },
+      "log_MajorAxisLength": {
+        "mean": 5.739545190731899,
+        "std": 0.24473514281492786
+      },
+      "log_MinorAxisLength": {
+        "mean": 5.29468445177502,
+        "std": 0.1911178402324244
+      },
+      "log_ConvexArea": {
+        "mean": 10.792349972494128,
+        "std": 0.4132572277128737
+      },
+      "log_EquivDiameter": {
+        "mean": 5.514580281201827,
+        "std": 0.20526975556030044
+      }
+    }
+  },
+  "class_distribution": {
+    "train": {
+      "DERMASON": 2503,
+      "SIRA": 1837,
+      "SEKER": 1408,
+      "HOROZ": 1286,
+      "CALI": 1151,
+      "BARBUNYA": 927,
+      "BOMBAY": 361
+    },
+    "val": {
+      "DERMASON": 352,
+      "SIRA": 280,
+      "SEKER": 201,
+      "HOROZ": 186,
+      "CALI": 154,
+      "BARBUNYA": 124,
+      "BOMBAY": 50
+    },
+    "test": {
+      "DERMASON": 691,
+      "SIRA": 519,
+      "SEKER": 418,
+      "HOROZ": 402,
+      "CALI": 325,
+      "BARBUNYA": 271,
+      "BOMBAY": 111
+    }
+  }
+}

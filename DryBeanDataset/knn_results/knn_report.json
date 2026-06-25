@@ -1,0 +1,322 @@
+{
+  "algorithm": "hand_written_knn",
+  "distance": "squared_euclidean",
+  "voting": "majority_vote_with_distance_sum_tie_break",
+  "data_dir": "DryBeanDataset\\selected_features\\standardized",
+  "feature_count": 16,
+  "features": [
+    "Area",
+    "Perimeter",
+    "AspectRation",
+    "Eccentricity",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor4",
+    "AreaPerPerimeter",
+    "AreaPerPerimeterSquared",
+    "PerimeterPerArea",
+    "ConvexAreaGap",
+    "AreaEllipseRatio",
+    "log_MajorAxisLength"
+  ],
+  "train_size": 9473,
+  "val_size": 1347,
+  "test_size": 2737,
+  "candidate_k_values": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21
+  ],
+  "validation_accuracy_by_k": {
+    "1": 0.8953229398663697,
+    "3": 0.9161098737936154,
+    "5": 0.9161098737936154,
+    "7": 0.9205642167780252,
+    "9": 0.9242761692650334,
+    "11": 0.9265033407572383,
+    "13": 0.9242761692650334,
+    "15": 0.9265033407572383,
+    "17": 0.9227913882702301,
+    "19": 0.9213066072754269,
+    "21": 0.9242761692650334
+  },
+  "best_k": 11,
+  "validation_report": {
+    "accuracy": 0.9265033407572383,
+    "macro_avg": {
+      "precision": 0.9456181481295174,
+      "recall": 0.9379518541561153,
+      "f1": 0.941289422100441
+    },
+    "weighted_avg": {
+      "precision": 0.9285742424159619,
+      "recall": 0.9265033407572383,
+      "f1": 0.9270544955768891
+    },
+    "per_class": {
+      "BARBUNYA": {
+        "precision": 0.9649122807017544,
+        "recall": 0.8870967741935484,
+        "f1": 0.9243697478991597,
+        "support": 124
+      },
+      "BOMBAY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      },
+      "CALI": {
+        "precision": 0.9433962264150944,
+        "recall": 0.974025974025974,
+        "f1": 0.9584664536741214,
+        "support": 154
+      },
+      "DERMASON": {
+        "precision": 0.9193083573487032,
+        "recall": 0.90625,
+        "f1": 0.9127324749642347,
+        "support": 352
+      },
+      "HOROZ": {
+        "precision": 0.9833333333333333,
+        "recall": 0.9516129032258065,
+        "f1": 0.9672131147540983,
+        "support": 186
+      },
+      "SEKER": {
+        "precision": 0.9744897959183674,
+        "recall": 0.9502487562189055,
+        "f1": 0.9622166246851385,
+        "support": 201
+      },
+      "SIRA": {
+        "precision": 0.8338870431893688,
+        "recall": 0.8964285714285715,
+        "f1": 0.864027538726334,
+        "support": 280
+      }
+    },
+    "labels": [
+      "BARBUNYA",
+      "BOMBAY",
+      "CALI",
+      "DERMASON",
+      "HOROZ",
+      "SEKER",
+      "SIRA"
+    ],
+    "confusion_matrix": [
+      [
+        110,
+        0,
+        8,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        150,
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        319,
+        0,
+        4,
+        29
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        177,
+        0,
+        8
+      ],
+      [
+        2,
+        0,
+        0,
+        2,
+        0,
+        191,
+        6
+      ],
+      [
+        1,
+        0,
+        0,
+        26,
+        1,
+        1,
+        251
+      ]
+    ]
+  },
+  "test_report": {
+    "accuracy": 0.9214468396054074,
+    "macro_avg": {
+      "precision": 0.9358729003038793,
+      "recall": 0.9328229169575507,
+      "f1": 0.9341938976312717
+    },
+    "weighted_avg": {
+      "precision": 0.9220863441925836,
+      "recall": 0.9214468396054074,
+      "f1": 0.9216377290875635
+    },
+    "per_class": {
+      "BARBUNYA": {
+        "precision": 0.953307392996109,
+        "recall": 0.9040590405904059,
+        "f1": 0.928030303030303,
+        "support": 271
+      },
+      "BOMBAY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 111
+      },
+      "CALI": {
+        "precision": 0.9161676646706587,
+        "recall": 0.9415384615384615,
+        "f1": 0.9286798179059179,
+        "support": 325
+      },
+      "DERMASON": {
+        "precision": 0.9028985507246376,
+        "recall": 0.9015918958031838,
+        "f1": 0.9022447501810282,
+        "support": 691
+      },
+      "HOROZ": {
+        "precision": 0.9720812182741116,
+        "recall": 0.9527363184079602,
+        "f1": 0.9623115577889448,
+        "support": 402
+      },
+      "SEKER": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9473684210526315,
+        "f1": 0.9473684210526315,
+        "support": 418
+      },
+      "SIRA": {
+        "precision": 0.8592870544090057,
+        "recall": 0.882466281310212,
+        "f1": 0.870722433460076,
+        "support": 519
+      }
+    },
+    "labels": [
+      "BARBUNYA",
+      "BOMBAY",
+      "CALI",
+      "DERMASON",
+      "HOROZ",
+      "SEKER",
+      "SIRA"
+    ],
+    "confusion_matrix": [
+      [
+        245,
+        0,
+        22,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        111,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        9,
+        0,
+        306,
+        0,
+        6,
+        1,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        623,
+        0,
+        15,
+        53
+      ],
+      [
+        0,
+        0,
+        6,
+        4,
+        383,
+        0,
+        9
+      ],
+      [
+        3,
+        0,
+        0,
+        11,
+        0,
+        396,
+        8
+      ],
+      [
+        0,
+        0,
+        0,
+        52,
+        5,
+        4,
+        458
+      ]
+    ]
+  },
+  "outputs": {
+    "val_predictions": "DryBeanDataset\\knn_results\\knn_val_predictions.csv",
+    "test_predictions": "DryBeanDataset\\knn_results\\knn_test_predictions.csv",
+    "test_confusion_matrix": "DryBeanDataset\\knn_results\\knn_test_confusion_matrix.csv"
+  }
+}

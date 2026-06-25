@@ -1,0 +1,88 @@
+{
+  "data_dir": "DryBeanDataset\\selected_features\\standardized",
+  "feature_count": 16,
+  "test_samples": 2737,
+  "repeats": 3,
+  "warmups": 1,
+  "timing_scope": "prediction only; data loading and model fitting are excluded",
+  "knn_k": 11,
+  "results": [
+    {
+      "model": "KNN",
+      "repeats": 3,
+      "test_samples": 2737,
+      "mean_total_seconds": 62.563502833334496,
+      "median_total_seconds": 62.200363699987065,
+      "min_total_seconds": 61.99092430001474,
+      "max_total_seconds": 63.499220500001684,
+      "p95_total_seconds": 62.200363699987065,
+      "mean_ms_per_sample": 22.858422664718486,
+      "samples_per_second": 43.747550505463344,
+      "all_total_seconds": [
+        62.200363699987065,
+        63.499220500001684,
+        61.99092430001474
+      ],
+      "test_accuracy": 0.9214468396054074
+    },
+    {
+      "model": "ID3",
+      "repeats": 3,
+      "test_samples": 2737,
+      "mean_total_seconds": 0.0048157666848662,
+      "median_total_seconds": 0.004523700044956058,
+      "min_total_seconds": 0.004502700001467019,
+      "max_total_seconds": 0.005420900008175522,
+      "p95_total_seconds": 0.004523700044956058,
+      "mean_ms_per_sample": 0.0017595055479964195,
+      "samples_per_second": 568341.4872653956,
+      "all_total_seconds": [
+        0.004502700001467019,
+        0.004523700044956058,
+        0.005420900008175522
+      ],
+      "test_accuracy": 0.907197661673365
+    },
+    {
+      "model": "Random Forest",
+      "repeats": 3,
+      "test_samples": 2737,
+      "mean_total_seconds": 0.22237640000336492,
+      "median_total_seconds": 0.21964139997726306,
+      "min_total_seconds": 0.21707090002018958,
+      "max_total_seconds": 0.23041690001264215,
+      "p95_total_seconds": 0.21964139997726306,
+      "mean_ms_per_sample": 0.08124822798807632,
+      "samples_per_second": 12307.96073665454,
+      "all_total_seconds": [
+        0.21707090002018958,
+        0.21964139997726306,
+        0.23041690001264215
+      ],
+      "test_accuracy": 0.9229082937522836
+    },
+    {
+      "model": "BP Neural Network",
+      "repeats": 3,
+      "test_samples": 2737,
+      "mean_total_seconds": 0.22115536664690202,
+      "median_total_seconds": 0.21928769996156916,
+      "min_total_seconds": 0.2170473999576643,
+      "max_total_seconds": 0.22713100002147257,
+      "p95_total_seconds": 0.21928769996156916,
+      "mean_ms_per_sample": 0.08080210692250714,
+      "samples_per_second": 12375.914912206994,
+      "all_total_seconds": [
+        0.2170473999576643,
+        0.22713100002147257,
+        0.21928769996156916
+      ],
+      "test_accuracy": 0.9199853854585313
+    }
+  ],
+  "outputs": {
+    "summary_csv": "DryBeanDataset\\inference_speed_results\\inference_speed_summary.csv",
+    "total_inference_time_bar": "DryBeanDataset\\inference_speed_results\\total_inference_time_bar.png",
+    "ms_per_sample_bar": "DryBeanDataset\\inference_speed_results\\ms_per_sample_bar.png"
+  }
+}

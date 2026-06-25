@@ -1,0 +1,117 @@
+{
+  "data_dir": "DryBeanDataset\\selected_features\\standardized",
+  "feature_count": 16,
+  "features": [
+    "Area",
+    "Perimeter",
+    "AspectRation",
+    "Eccentricity",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor4",
+    "AreaPerPerimeter",
+    "AreaPerPerimeterSquared",
+    "PerimeterPerArea",
+    "ConvexAreaGap",
+    "AreaEllipseRatio",
+    "log_MajorAxisLength"
+  ],
+  "train_size": 9473,
+  "val_size": 1347,
+  "test_size_used": 2737,
+  "test_limit": 0,
+  "noise_types": [
+    "gaussian",
+    "uniform",
+    "feature_dropout",
+    "label_flip"
+  ],
+  "noise_intensities": [
+    0.3,
+    0.5
+  ],
+  "model_order": [
+    "KNN",
+    "ID3",
+    "Random Forest",
+    "BP Neural Network"
+  ],
+  "parameters": {
+    "knn_k": 11,
+    "rf_trees": 41,
+    "bp_epochs": 20,
+    "bp_patience": 8,
+    "show_bp_epochs": false,
+    "random_state": 42
+  },
+  "baseline": {
+    "KNN": 0.9214468396054074,
+    "ID3": 0.907197661673365,
+    "Random Forest": 0.9229082937522836,
+    "BP Neural Network": 0.9199853854585313
+  },
+  "scenarios": {
+    "clean_0.00": {
+      "KNN": 0.9214468396054074,
+      "ID3": 0.907197661673365,
+      "Random Forest": 0.9229082937522836,
+      "BP Neural Network": 0.9199853854585313
+    },
+    "gaussian_0.30": {
+      "KNN": 0.9192546583850931,
+      "ID3": 0.9035440263061747,
+      "Random Forest": 0.9185239313116551,
+      "BP Neural Network": 0.9254658385093167
+    },
+    "gaussian_0.50": {
+      "KNN": 0.8998903909389843,
+      "ID3": 0.8830836682499087,
+      "Random Forest": 0.9123127511874315,
+      "BP Neural Network": 0.9137742053343076
+    },
+    "uniform_0.30": {
+      "KNN": 0.9192546583850931,
+      "ID3": 0.9017172086225794,
+      "Random Forest": 0.9199853854585313,
+      "BP Neural Network": 0.9247351114358787
+    },
+    "uniform_0.50": {
+      "KNN": 0.9126781147241505,
+      "ID3": 0.8962367555717939,
+      "Random Forest": 0.9159663865546218,
+      "BP Neural Network": 0.917793204238217
+    },
+    "feature_dropout_0.30": {
+      "KNN": 0.9156010230179028,
+      "ID3": 0.896967482645232,
+      "Random Forest": 0.9181585677749361,
+      "BP Neural Network": 0.9108512970405553
+    },
+    "feature_dropout_0.50": {
+      "KNN": 0.9046401169163317,
+      "ID3": 0.8724881256850566,
+      "Random Forest": 0.9148702959444648,
+      "BP Neural Network": 0.8776032151991231
+    },
+    "label_flip_0.30": {
+      "KNN": 0.9061015710632079,
+      "ID3": 0.8184143222506394,
+      "Random Forest": 0.9207161125319693,
+      "BP Neural Network": 0.9163317500913409
+    },
+    "label_flip_0.50": {
+      "KNN": 0.8344903178662769,
+      "ID3": 0.7299963463646328,
+      "Random Forest": 0.8980635732553891,
+      "BP Neural Network": 0.9163317500913409
+    }
+  },
+  "outputs": {
+    "summary_csv": "DryBeanDataset\\robustness_results\\robustness_summary.csv",
+    "accuracy_drop_plot": "DryBeanDataset\\robustness_results\\accuracy_drop_by_noise.png",
+    "accuracy_plot": "DryBeanDataset\\robustness_results\\accuracy_by_noise.png"
+  }
+}

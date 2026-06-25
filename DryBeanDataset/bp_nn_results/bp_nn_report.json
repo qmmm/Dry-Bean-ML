@@ -1,0 +1,312 @@
+{
+  "algorithm": "hand_written_bp_neural_network",
+  "architecture": {
+    "input_size": 16,
+    "hidden_size": 32,
+    "output_size": 7,
+    "hidden_activation": "relu",
+    "output_activation": "softmax",
+    "loss": "weighted_cross_entropy",
+    "optimizer": "stochastic_gradient_descent",
+    "regularization": {
+      "l2": 0.0005,
+      "dropout_rate": 0.15,
+      "dropout_scope": "hidden layer during training only"
+    }
+  },
+  "data_dir": "DryBeanDataset\\selected_features\\standardized",
+  "features": [
+    "ShapeFactor1",
+    "AspectRation",
+    "Eccentricity",
+    "log_MajorAxisLength",
+    "Area",
+    "ShapeFactor2",
+    "AreaPerPerimeter",
+    "Perimeter",
+    "roundness",
+    "PerimeterPerArea",
+    "AreaPerPerimeterSquared",
+    "ShapeFactor4",
+    "AreaEllipseRatio",
+    "ConvexAreaGap",
+    "Solidity",
+    "Extent"
+  ],
+  "labels": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "train_size": 9473,
+  "val_size": 1347,
+  "test_size": 2737,
+  "parameters": {
+    "epochs_requested": 80,
+    "epochs_ran": 34,
+    "learning_rate_initial": 0.015,
+    "learning_rate_final": 0.009211874999999998,
+    "l2": 0.0005,
+    "dropout_rate": 0.15,
+    "patience": 15,
+    "random_state": 42
+  },
+  "best_validation": {
+    "best_epoch": 19,
+    "best_val_accuracy": 0.9339272457312546
+  },
+  "validation_report": {
+    "accuracy": 0.9339272457312546,
+    "macro_avg": {
+      "precision": 0.9431590099150274,
+      "recall": 0.945309789999074,
+      "f1": 0.9437207521284579
+    },
+    "weighted_avg": {
+      "precision": 0.9356887430697076,
+      "recall": 0.9339272457312546,
+      "f1": 0.9342127264919172
+    },
+    "per_class": {
+      "BARBUNYA": {
+        "precision": 0.8939393939393939,
+        "recall": 0.9516129032258065,
+        "f1": 0.921875,
+        "support": 124
+      },
+      "BOMBAY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 50
+      },
+      "CALI": {
+        "precision": 0.9724137931034482,
+        "recall": 0.9155844155844156,
+        "f1": 0.94314381270903,
+        "support": 154
+      },
+      "DERMASON": {
+        "precision": 0.9578313253012049,
+        "recall": 0.9034090909090909,
+        "f1": 0.9298245614035089,
+        "support": 352
+      },
+      "HOROZ": {
+        "precision": 0.9782608695652174,
+        "recall": 0.967741935483871,
+        "f1": 0.972972972972973,
+        "support": 186
+      },
+      "SEKER": {
+        "precision": 0.9271844660194175,
+        "recall": 0.9502487562189055,
+        "f1": 0.9385749385749387,
+        "support": 201
+      },
+      "SIRA": {
+        "precision": 0.87248322147651,
+        "recall": 0.9285714285714286,
+        "f1": 0.8996539792387543,
+        "support": 280
+      }
+    },
+    "confusion_matrix": [
+      [
+        118,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        141,
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        318,
+        0,
+        10,
+        24
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        180,
+        0,
+        5
+      ],
+      [
+        3,
+        0,
+        0,
+        2,
+        0,
+        191,
+        5
+      ],
+      [
+        1,
+        0,
+        0,
+        12,
+        2,
+        5,
+        260
+      ]
+    ]
+  },
+  "test_report": {
+    "accuracy": 0.9218122031421264,
+    "macro_avg": {
+      "precision": 0.9309959270237115,
+      "recall": 0.9344385170331521,
+      "f1": 0.9320912100155461
+    },
+    "weighted_avg": {
+      "precision": 0.923274602054041,
+      "recall": 0.9218122031421264,
+      "f1": 0.921910238590581
+    },
+    "per_class": {
+      "BARBUNYA": {
+        "precision": 0.8839590443686007,
+        "recall": 0.955719557195572,
+        "f1": 0.9184397163120568,
+        "support": 271
+      },
+      "BOMBAY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 111
+      },
+      "CALI": {
+        "precision": 0.9504950495049505,
+        "recall": 0.8861538461538462,
+        "f1": 0.9171974522292993,
+        "support": 325
+      },
+      "DERMASON": {
+        "precision": 0.9404580152671755,
+        "recall": 0.8914616497829233,
+        "f1": 0.9153046062407132,
+        "support": 691
+      },
+      "HOROZ": {
+        "precision": 0.9669211195928753,
+        "recall": 0.945273631840796,
+        "f1": 0.9559748427672956,
+        "support": 402
+      },
+      "SEKER": {
+        "precision": 0.9140271493212669,
+        "recall": 0.9665071770334929,
+        "f1": 0.9395348837209303,
+        "support": 418
+      },
+      "SIRA": {
+        "precision": 0.8611111111111112,
+        "recall": 0.8959537572254336,
+        "f1": 0.8781869688385271,
+        "support": 519
+      }
+    },
+    "confusion_matrix": [
+      [
+        259,
+        0,
+        10,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        111,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        24,
+        0,
+        288,
+        0,
+        6,
+        2,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        616,
+        0,
+        23,
+        52
+      ],
+      [
+        3,
+        0,
+        5,
+        4,
+        380,
+        0,
+        10
+      ],
+      [
+        6,
+        0,
+        0,
+        1,
+        0,
+        404,
+        7
+      ],
+      [
+        1,
+        0,
+        0,
+        34,
+        7,
+        12,
+        465
+      ]
+    ]
+  },
+  "outputs": {
+    "val_predictions": "DryBeanDataset\\bp_nn_results\\bp_nn_val_predictions.csv",
+    "test_predictions": "DryBeanDataset\\bp_nn_results\\bp_nn_test_predictions.csv",
+    "test_confusion_matrix": "DryBeanDataset\\bp_nn_results\\bp_nn_test_confusion_matrix.csv",
+    "training_history": "DryBeanDataset\\bp_nn_results\\bp_nn_training_history.csv"
+  }
+}

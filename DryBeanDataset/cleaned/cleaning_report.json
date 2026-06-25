@@ -1,0 +1,117 @@
+{
+  "input_rows": {
+    "train": 9527,
+    "val": 1347,
+    "test": 2737
+  },
+  "output_rows": {
+    "train": 9473,
+    "val": 1347,
+    "test": 2737
+  },
+  "output_files": {
+    "train": "DryBeanDataset\\cleaned\\Dry_Bean_Dataset_Clean_train.csv",
+    "val": "DryBeanDataset\\cleaned\\Dry_Bean_Dataset_Clean_val.csv",
+    "test": "DryBeanDataset\\cleaned\\Dry_Bean_Dataset_Clean_test.csv"
+  },
+  "numeric_columns": [
+    "Area",
+    "Perimeter",
+    "MajorAxisLength",
+    "MinorAxisLength",
+    "AspectRation",
+    "Eccentricity",
+    "ConvexArea",
+    "EquivDiameter",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "Compactness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor3",
+    "ShapeFactor4"
+  ],
+  "target_column": "Class",
+  "training_medians_used_for_imputation": {
+    "Area": 44593.0,
+    "Perimeter": 794.336,
+    "MajorAxisLength": 296.60378303154647,
+    "MinorAxisLength": 192.41783011644463,
+    "AspectRation": 1.5515086328591132,
+    "Eccentricity": 0.7645756842794433,
+    "ConvexArea": 45131.0,
+    "EquivDiameter": 238.2804461519558,
+    "Extent": 0.759137221385034,
+    "Solidity": 0.988268760579274,
+    "roundness": 0.8827570263259723,
+    "Compactness": 0.8011201944409586,
+    "ShapeFactor1": 0.0066477297333235,
+    "ShapeFactor2": 0.0016984846011844,
+    "ShapeFactor3": 0.6417935659411194,
+    "ShapeFactor4": 0.9963934747361278
+  },
+  "class_distribution_after_cleaning": {
+    "train": {
+      "DERMASON": 2503,
+      "SIRA": 1837,
+      "SEKER": 1408,
+      "HOROZ": 1286,
+      "CALI": 1151,
+      "BARBUNYA": 927,
+      "BOMBAY": 361
+    },
+    "val": {
+      "DERMASON": 352,
+      "SIRA": 280,
+      "SEKER": 201,
+      "HOROZ": 186,
+      "CALI": 154,
+      "BARBUNYA": 124,
+      "BOMBAY": 50
+    },
+    "test": {
+      "DERMASON": 691,
+      "SIRA": 519,
+      "SEKER": 418,
+      "HOROZ": 402,
+      "CALI": 325,
+      "BARBUNYA": 271,
+      "BOMBAY": 111
+    }
+  },
+  "issue_counts": {
+    "test": {
+      "Perimeter:missing_token": 146,
+      "Perimeter:imputed_train_median": 146,
+      "Solidity:missing_token": 121,
+      "Solidity:imputed_train_median": 121,
+      "class_normalized": 114,
+      "Compactness:removed_unit_cm": 92,
+      "Area:negative_to_abs": 19,
+      "MajorAxisLength:gt_1000_to_missing": 6,
+      "MajorAxisLength:imputed_train_median": 6
+    },
+    "train": {
+      "Solidity:missing_token": 474,
+      "Solidity:imputed_train_median": 474,
+      "Perimeter:missing_token": 469,
+      "Perimeter:imputed_train_median": 469,
+      "class_normalized": 406,
+      "Compactness:removed_unit_cm": 258,
+      "duplicate_in_eval_dropped_from_train": 30,
+      "duplicate_within_split_dropped": 24,
+      "MajorAxisLength:gt_1000_to_missing": 19,
+      "MajorAxisLength:imputed_train_median": 19
+    },
+    "val": {
+      "Solidity:missing_token": 63,
+      "Solidity:imputed_train_median": 63,
+      "Perimeter:missing_token": 62,
+      "Perimeter:imputed_train_median": 62,
+      "class_normalized": 61,
+      "Compactness:removed_unit_cm": 38,
+      "Area:negative_to_abs": 11
+    }
+  }
+}
